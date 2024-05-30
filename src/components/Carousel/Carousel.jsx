@@ -11,7 +11,7 @@ import { useEffect } from "react";
 const Controls = ({ data }) => {
   const swiper = useSwiper();
   useEffect(() => {
-    swiper.slideTo(0, 1);
+    swiper.slideTo(0,1);
   }, [data]);
 
   return <></>;
@@ -26,6 +26,36 @@ const Carousel = ({ data, renderCardComponent }) => {
         slidesPerView={7}
         spaceBetween={10}
         allowTouchMove
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 10,
+          },
+          1200: {
+            slidesPerView: 6,
+            spaceBetween: 10,
+          },
+          1400: {
+            slidesPerView: 7,
+            spaceBetween: 10,
+          },
+        }}
       >
         <Controls data={data} />
         <CarouselLeftNavigation />

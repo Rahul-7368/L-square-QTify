@@ -10,7 +10,7 @@ const TopAlbums = () => {
 
   const fetchTopAlbums = async () => {
     try {
-      const res = await axios.get(
+      const res = await axios.get(  
         "https://qtify-backend-labs.crio.do/albums/top"
       );
       setData(res.data);
