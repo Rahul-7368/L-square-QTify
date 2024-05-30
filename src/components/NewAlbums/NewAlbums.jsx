@@ -6,7 +6,7 @@ import Carousel from "../Carousel/Carousel";
 
 const NewAlbums = () => {
   const [data, setData] = useState([]);
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
 
   const fetchNewAlbums = async () => {
     try {
